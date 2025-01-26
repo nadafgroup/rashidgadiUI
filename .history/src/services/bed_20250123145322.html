@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Bed Mattresses</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4b79a1, #283e51);
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #4b79a1;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: #4b79a1;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #283e51, #4b79a1);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        /* Adjust grid for smaller screens */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Discover Quality Sleep with Our Mattresses
+    </header>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>At [Your Brand Name], we specialize in crafting premium mattresses that redefine your sleep experience. Designed with innovative materials and expert craftsmanship, our mattresses promise durability, comfort, and support tailored to your needs.</p>
+        </section>
+
+        <section>
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Advanced Comfort: Engineered layers for unparalleled softness and support.</li>
+                <li>Built to Last: Superior materials ensure extended durability.</li>
+                <li>Spinal Health: Reduces pressure points and promotes proper alignment.</li>
+                <li>Eco-Friendly Choices: Sustainable and eco-conscious designs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Our Mattress Range</h2>
+            <ul>
+                <li><strong>Memory Foam:</strong> Adapts to your body, relieving pressure for side sleepers.</li>
+                <li><strong>Hybrid:</strong> A perfect mix of support and plush comfort for all styles.</li>
+                <li><strong>Latex:</strong> Breathable, hypoallergenic, and perfect for hot sleepers.</li>
+                <li><strong>Adjustable:</strong> Tailored firmness for personalized comfort.</li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <p>Explore our top-rated designs:</p>
+            <img src="placeholder1.jpg" alt="Luxurious Memory Foam Mattress">
+            <img src="placeholder2.jpg" alt="Premium Hybrid Mattress">
+            <img src="placeholder3.jpg" alt="Eco-Friendly Adjustable Mattress">
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>Let us help you find your perfect mattress. Reach out today:</p>
+            <ul>
+                <li>📞 Phone: [Your Phone Number]</li>
+                <li>📧 Email: [Your Email Address]</li>
+                <li>🌐 Website: [Your Website URL]</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        [Your Brand Name] &copy; 2025 - Where comfort meets quality.
+    </footer>
+</body>
+</html>

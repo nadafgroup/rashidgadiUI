@@ -1,0 +1,94 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 2rem;
+    animation: fadeIn 1.5s;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.info {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 1s;
+}
+
+.info ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.info ul li {
+    margin: 10px 0;
+}
+
+.image-container {
+    flex: 1;
+    animation: slideInRight 1s;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    animation: fadeIn 1.5s;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}

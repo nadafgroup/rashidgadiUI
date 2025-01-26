@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashid Gadi Makers</title>
+    <style>
+        /* Reset and Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            color: white;
+            height: 70vh;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #4CAF50;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .gallery img {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Rashid Gadi Makers</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <div>
+            <h1>Welcome to Rashid Gadi Makers</h1>
+            <p>Your one-stop solution for premium mattresses and pillows.</p>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We specialize in crafting high-quality mattresses, pillows, and other bedding essentials to enhance your comfort and well-being.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200" alt="Gallery Image 1">
+            <img src="https://via.placeholder.com/300x200" alt="Gallery Image 2">
+            <img src="https://via.placeholder.com/300x200" alt="Gallery Image 3">
+            <img src="https://via.placeholder.com/300x200" alt="Gallery Image 4">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Rashid Gadi Makers has been dedicated to providing the best bedding solutions for over a decade. Our commitment to quality and customer satisfaction sets us apart.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or need assistance? Reach out to us anytime!</p>
+        <p>Email: <a href="mailto:info@rashidgadimakers.com">info@rashidgadimakers.com</a></p>
+        <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rashid Gadi Makers. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

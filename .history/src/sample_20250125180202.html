@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multilingual Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #language-select {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="language-select">
+    <label for="language">Choose Language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="hi">हिंदी (Hindi)</option>
+      <option value="mr">मराठी (Marathi)</option>
+    </select>
+  </div>
+
+  <div id="content">
+    <h1>Welcome to Rashid Gadi Makers</h1>
+    <p>We provide high-quality mattresses, pillows, and custom furniture to suit your needs.</p>
+  </div>
+
+  <script>
+    const apiKey = 'YOUR_GOOGLE_API_KEY'; // Replace with your API key
+    const content = document.getElementById('content');
+    const languageSelect = document.getElementById('language');
+
+    languageSelect.addEventListener('change', () => {
+      const targetLanguage = languageSelect.value;
+      const text = content.innerHTML;
+
+      fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          q: text,
+          target: targetLanguage
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          const translatedText = data.data.translations[0].translatedText;
+          content.innerHTML = translatedText;
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>

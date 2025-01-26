@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+
+
+@font-face {
+    font-family: 'inter';
+    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
+}
+
+ /* Reset and Basic Styling */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ddd;
+}
+
+.logo img{
+    width: auto;
+    height: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../assets/img/1.png') no-repeat center center/cover;
+    /* color: white; */
+    height: 70vh;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.content{
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, #5c5cbe, #2b84c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'poppins';
+}
+
+.content p {
+    font-size: 1.2rem;
+    font-family: 'inter';
+
+}
+
+/* service */
+/* Services Section Styling */
+
+
+
+
+.services {
+    padding: 0px 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    height: 100vh;
+    background-color: #d9e8f2;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    
+}
+
+
+
+.services-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 30vh;
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allows content to wrap if needed */
+    width: 100%;
+ 
+}
+
+.services-image {
+    flex: 1;
+    order: 2; /* Ensures the image appears on the right */
+    text-align: center;
+}
+
+.services-content {
+    flex: 2;
+    order: 1; /* Ensures the content is on the left */
+    padding-right: 30px; /* Adds space between content and image */
+    margin-top: 17vh;
+    
+}
+
+/* Adjusts the services-container for the card layout */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    padding: 20px;
+   
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .row {
+        flex-direction: column; /* Stacks the image and content in a column for smaller screens */
+    }
+
+    .services-content, .services-image {
+        order: unset; /* Resets the order for better stacking */
+        flex: unset; /* Ensures both elements take full width */
+        width: 100%;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .services-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row on small screens */
+    }
+}
+
+.text{
+    text-align: left;
+    padding: 20px;
+}
+
+.text h2 {
+  
+    font-size: 2rem;
+    color: #333;
+    font-family: 'poppins';
+    margin-bottom: 0px;
+}
+
+.text p {
+    font-size: 1rem;
+ 
+    color: #666;
+    font-family: 'inter';
+}
+
+
+.service-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Exo';
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #666;
+    font-family: 'inter';
+}
+
+.btn-more {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-more:hover {
+    background: #0056b3;
+}
+
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #4CAF50;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+
+
+
