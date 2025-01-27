@@ -495,7 +495,7 @@ body {
 
     /* Hero Section */
     .hero {
-        height: 100vh;
+        height: auto;
         padding: 10px;
     }
 

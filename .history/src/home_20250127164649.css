@@ -173,6 +173,9 @@ body {
 
 @media (max-width: 992px) {
 
+    .hero{
+        height: 100vh;
+    }
     .row {
         flex-direction: column; 
     }
@@ -495,7 +498,7 @@ body {
 
     /* Hero Section */
     .hero {
-        height: 100vh;
+        height: auto;
         padding: 10px;
     }
 
