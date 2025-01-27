@@ -462,9 +462,12 @@ body {
 
 
 @media (max-width: 576px){
-  .content{
-    margin-bottom: 100%;
-  }
+    .hero {
+        height: 100vh;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -499,7 +502,7 @@ body {
 
     /* Hero Section */
     .hero {
-        height: 90vh;
+        height: 100vh;
         padding: 10px;
     }
 

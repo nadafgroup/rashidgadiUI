@@ -461,11 +461,7 @@ body {
 
 
 
-@media (max-width: 576px){
-  .content{
-    margin-bottom: 100%;
-  }
-}
+
 
 
  /* General mobile responsiveness */
@@ -499,8 +495,9 @@ body {
 
     /* Hero Section */
     .hero {
-        height: 90vh;
+        height: 100vh;
         padding: 10px;
+  
     }
 
     
