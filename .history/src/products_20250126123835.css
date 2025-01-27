@@ -228,6 +228,30 @@ header {
         width: 100%; /* Make gallery images take full width on small screens */
         height: auto;
     }
+
+    /* Hide the menu by default in mobile view */
+    .nav-right ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-right ul li {
+        margin: 10px 0;
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+    }
+
+    /* Display menu when hamburger is clicked */
+    .nav-right.active ul {
+        display: flex;
+    }
 }
 
 @media (max-width: 480px) {

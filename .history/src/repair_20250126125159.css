@@ -1,28 +1,10 @@
-@font-face {
-    font-family: 'poppins';
-    src: url('../assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'inter';
-    src: url('../assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Exo';
-    src: url('../assets/fonts/Exo2-VariableFont_wght.ttf') format('truetype');
-}
-
 body {
     margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
-    height: 100vh;
 }
 
 header {
@@ -34,6 +16,13 @@ header {
     background-color: #23486A;
     color: white;
     font-size: 1rem;
+}
+
+.logo {
+    width: auto;
+    height: 50px;
+    margin-left: 10px;
+    margin-bottom: 0px;
 }
 
 .nav-right ul {
@@ -52,7 +41,6 @@ header {
     color: white;
     padding: 10px;
     transition: 0.3s;
-    font-family: 'poppins';
 }
 
 .nav-right ul li a:hover {
@@ -88,11 +76,18 @@ header {
     background-color: #5c6bc0;
 }
 
-.logo {
-    width: auto;
-    height: 50px;
-    margin-left: 10px;
-    margin-bottom: 0px;
+.menu {
+    display: flex;
+}
+
+.menu li {
+    display: block;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .container {
@@ -122,12 +117,12 @@ header {
     margin: 10px 0;
 }
 
-.image-container {
+.video-container {
     flex: 1;
     animation: slideInRight 1s;
 }
 
-.image-container img {
+.video-container video {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -148,7 +143,6 @@ header {
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
-    margin: 20px;
     transition: transform 0.3s;
 }
 
@@ -156,47 +150,42 @@ header {
     transform: scale(1.1);
 }
 
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto;
-    background-color: rgb(0, 0, 0); /* Black background with opacity */
-    background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
-    padding-top: 60px;
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .nav-right ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #23486A;
+    }
+
+    .nav-right ul li {
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li a {
+        padding: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .info, .video-container {
+        flex: none;
+        width: 100%;
+    }
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    border-radius: 10px;
-}
-
-.close {
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #f1f1f1;
-    text-decoration: none;
-    cursor: pointer;
-}
-
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -210,42 +199,4 @@ header {
 @keyframes slideInRight {
     from { transform: translateX(100%); }
     to { transform: translateX(0); }
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Switch to column layout */
-        padding: 20px;
-    }
-
-    .info, .image-container {
-        flex: none; /* Reset flex behavior */
-        width: 100%;
-    }
-
-    .gallery img {
-        width: 100%; /* Make gallery images take full width on small screens */
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-right ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-right ul li {
-        margin: 10px 0;
-    }
-
-    .logo {
-        margin: 10px 0;
-    }
 }
