@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    /* background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); */
     height: 100vh;
 }
 
@@ -154,6 +154,26 @@ header {
 
 .gallery img:hover {
     transform: scale(1.1);
+}
+
+
+.rent-gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:30px auto ;
+    animation: fadeIn 1.5s;
+}
+
+.rent-gallery .rent-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: 0px;
+    /* margin-top: 0px; */
+    transition: transform 0.3s;
 }
 
 /* Modal Styles */
